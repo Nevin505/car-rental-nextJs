@@ -3,7 +3,7 @@
 }
 
 @media(max-width:835px){
-    .headerStyles{
-        padding-inline: var(--inlinePaddingSmallerDevice);
+    .sectionCommonStyles{
+        padding-inline: 1rem;
       }
     }

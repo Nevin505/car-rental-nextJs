@@ -1,3 +1,7 @@
+.border-0{
+    border: 0;
+
+}
 .bookingDownloadSection{
     background-image: url('../public/images/BannerBackground.png');
     background-repeat: no-repeat;
@@ -7,9 +11,22 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    gap: 0.4rem;
-
+    gap: 1rem;
+   border-radius: 1.5rem;
 }
+.bookingTypeContainer{
+    display: flex;  
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.bookingOptionButton{
+    color: white;
+    background-color: transparent;
+}
+
+
 .bookingTypeContainer{
     display: flex;  
     justify-content: center;
@@ -18,3 +35,65 @@
 }
 
 
+.whitebackground{
+  flex: 1;
+  padding: 0.6rem  2.5rem;
+}
+
+.buttonPadding{
+    padding:0.6875rem 4.75rem;
+    border-radius: var(--border-radius);
+}
+
+/* Third Row Desigin */
+.app-download-section{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+    & p{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+}
+.store-links-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    
+   
+}
+.appStore{       
+    width: 6.875rem;
+    height: 2rem;
+    background-size: contain;
+    background-image: url('../public/images/AppStore-Black.svg');        
+}
+.playStore{   
+    width: 6.875rem;
+    height: 2rem;
+    background-size: contain;  
+    background-image: url('../public/images/BlackPlayStoreButton.svg');       
+}
+
+
+@media(max-width:835px){
+    .bookingTypeContainer,.bookingTypeContainer{
+        display: none;
+    }
+    .bookingDownloadSection{
+    align-items: center;
+    }
+
+    .store-links-container{
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .app-download-section{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* bookingTypeContainer */
+/* bookingTypeContainer */

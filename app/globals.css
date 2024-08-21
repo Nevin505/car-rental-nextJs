@@ -12,6 +12,7 @@
   --inlinePaddingSmallerDevice: 1.25rem;
   --primary-Color: #e21e26;
   --button-primary: var(--primary-Color);
+  --border-radius:1rem
 }
 
 .pointer {
@@ -22,6 +23,12 @@
   border: none;
 }
 
+.border-white{
+  border:0.5px solid white;
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  visibility: hidden;
+}
 /* header{
   padding-inline: var(--inlinePaddingDesktop);
 }

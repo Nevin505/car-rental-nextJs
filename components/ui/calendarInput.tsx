@@ -1,18 +1,12 @@
 'use client'
-import { useRef } from 'react'
+
+import Image from 'next/image'
 import calendarInputStyles from './calendarInput.module.css'
-const calendarInput = () => {
-
-    const calendarRef=useRef();
-
-    const getInPutValue=()=>{
-        calendarRef.current.focus();
-    }
-
+const calendarInput = ({icon}:{ icon?: string }) => {
   return (
-    <div>
-          <input type="text"  onClick={getInPutValue}/>
-         <input  ref={calendarRef} type="datetime-local" className={calendarInputStyles.inputCalendar} />
+    <div className={calendarInputStyles.calendarContainer}>
+         <input  type="datetime-local" />
+        {icon && <Image className={calendarInputStyles.startIcon} src={icon} width={10} height={10} alt='Calendar-icon'/>}
     </div>
   )
 }

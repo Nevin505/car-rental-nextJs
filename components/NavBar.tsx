@@ -43,7 +43,7 @@ const NavBar = () => {
                 {/* Close Button */}
                { openNavigation && <Image src='/icons/Close-Icon.svg' id={navBarStyles.closeButton} width={24} height={24} alt='Close Menu Button' onClick={closeNavigationHandler}/>}
               </div>
-                {/*tO  Display the the nav Menu Items  */}
+                {/*tO  Display the the nav Menu Items  Menu Bar */}
                 <div className={`${navBarStyles.navBarLinks} ${openNavigation?navBarStyles.toggleDisplay:undefined}`}>
                 {navLinks.map((navLink:NavLink)=>{
                 return <Link className={navBarStyles.linkStyles} key={navLink.navItem} href={navLink.href}>{navLink.navItem}</Link>
