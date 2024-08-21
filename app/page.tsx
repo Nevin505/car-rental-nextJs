@@ -4,6 +4,7 @@ import pageStyles from "./page.module.css";
 import Hero from "@/components/Hero";
 import MobileBooking from "@/components/mobileVew/mobileBooking";
 import Carousel from "@/components/carousel/carousel";
+import PopularSection from "@/components/popularCarSection/popularSection";
 export default function Home() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function Home() {
             {/* To display only for Mobile Version */}
              <MobileBooking/>
              <Carousel/>
+             <PopularSection/>
       </Page>
     </> 
   );
