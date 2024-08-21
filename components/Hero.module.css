@@ -1,0 +1,20 @@
+.bookingDownloadSection{
+    background-image: url('../public/images/BannerBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 0.4rem;
+
+}
+.bookingTypeContainer{
+    display: flex;  
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+

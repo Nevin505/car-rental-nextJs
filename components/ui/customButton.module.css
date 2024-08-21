@@ -1,0 +1,13 @@
+.regular{
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+}
+
+.clicked::after{
+    content: "";
+    display: flex;
+    height: 0.05rem;
+    width: 100%;
+    background-color: white;
+}

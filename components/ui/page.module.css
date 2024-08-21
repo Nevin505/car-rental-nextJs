@@ -1,0 +1,9 @@
+.sectionCommonStyles{
+    padding-inline: var(--inlinePaddingDesktop);
+}
+
+@media(max-width:835px){
+    .headerStyles{
+        padding-inline: var(--inlinePaddingSmallerDevice);
+      }
+    }
