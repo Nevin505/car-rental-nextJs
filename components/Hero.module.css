@@ -37,7 +37,7 @@
 
 .whitebackground{
   flex: 1;
-  padding: 0.6rem  2.5rem;
+  padding: 0.4rem  2.5rem;
 }
 
 .buttonPadding{
@@ -52,6 +52,7 @@
     align-items: center;
     gap: 0.8rem;
     color: white;
+    padding-top: 0.4rem;
     & p{
         font-size: 0.8rem;
         font-weight: 300;

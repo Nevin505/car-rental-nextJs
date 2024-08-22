@@ -1,7 +1,9 @@
-const card = ({}) => {
+import cardstyles from './card.module.css'
+
+const card = ({children}:any) => {
   return (
-    <div>
-      
+    <div >
+      {children}
     </div>
   )
 }

@@ -21,12 +21,6 @@ const carousel = () => {
     return ()=>{clearInterval(interval)}
    },[])
 
-   
-
-  console.log("The backgroundImage Index=",backGroundImageIndex);
-  
-
-
   return (
     <div className={carouselStyles.bannerWrapper} style={{ backgroundImage: `url(${backGroundImages[backGroundImageIndex]})` }}>
                       <div className={carouselStyles.offerContentWrapper}>
@@ -41,7 +35,7 @@ const carousel = () => {
         {/* Visual Indicator for the Carousel */}
         <div className={carouselStyles["carousel-navigator"]}>
             {indicators.map(indicator=>{
-              return  <div className={`${carouselStyles["circle-1"]} ${backGroundImageIndex==indicator?`${carouselStyles.active}`:''}`} ></div>
+              return  <div   key={indicator} className={`${carouselStyles["circle-1"]} ${backGroundImageIndex==indicator?`${carouselStyles.active}`:''}`} ></div>
             })}
                    </div>
     </div>

@@ -38,8 +38,8 @@ const Hero = () => {
                 <DropDown className={heroStyles.whitebackground} icon="/icons/DropDownLocation.svg" optionValues={[{optionLabel:"Al Quoz",optionValue:"Al Quoz"}]}/>
 
                 {/* Calendars */}
-                     <CalendarInput icon="/icons/calender.svg"/>
-                     <CalendarInput icon="/icons/calender.svg"/>
+                     <CalendarInput icon="/icons/calender.svg" >Pick-Up Date & Time </CalendarInput>
+                     <CalendarInput icon="/icons/calender.svg" >Drop Off Date & Time</CalendarInput>
 
                      {/* Search Button */}
 

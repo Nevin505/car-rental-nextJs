@@ -8,21 +8,26 @@ import { useState } from "react";
 const mobileBooking = () => {
 
     const[selectedButton,setIsSelected]=useState<string>('samePick');
+    const [isButtonClicked, setIsButtonClicked] = useState<boolean>(false);
 
 
     const handleBookingOption=(pickUptions:string)=>{
         setIsSelected(pickUptions)  
     }
 
+    const showBookingOptions=()=>{
+      setIsButtonClicked(true)
+    }
   return (
     <div className={mobileBookingStyles.bookingOptionsWrapper}>
         {/* Buttons for bookings */}
         <div className={mobileBookingStyles.bookingButtonsWrapper}>
-               <CustomButton className={`${mobileBookingStyles.buttonStyle} ${mobileBookingStyles.redButton}`}>Book a Car</CustomButton>
-               <CustomButton className={`${mobileBookingStyles.buttonStyle} ${mobileBookingStyles.whiteButton}`}>Quick Book</CustomButton>
+               <CustomButton  onClick={showBookingOptions} className={`${mobileBookingStyles.buttonStyle} ${mobileBookingStyles.redButton}`}>Book a Car</CustomButton>
+               <CustomButton onClick={showBookingOptions} className={`${mobileBookingStyles.buttonStyle} ${mobileBookingStyles.whiteButton}`}>Quick Book</CustomButton>
         </div>
         {/* To show the  different pick up Options */}
-        <div className={mobileBookingStyles.bookingOptionWrapper}>
+        { isButtonClicked && <>
+          <div className={mobileBookingStyles.bookingOptionWrapper}>
             <CustomButton  isSelected={selectedButton==='samePick'}  className={mobileBookingStyles.buttonfontSize} onClick={()=>handleBookingOption('samePick')} >Same as Pick-Up</CustomButton>
 
             <CustomButton isSelected={selectedButton==='differentPick'} className={mobileBookingStyles.buttonfontSize}  onClick={()=>handleBookingOption('differentPick')}>Different Drop-Off</CustomButton>
@@ -35,10 +40,15 @@ const mobileBooking = () => {
 
         <DropDown icon="/icons/DropDownLocation.svg" className={mobileBookingStyles.greyBackground} optionValues={[{optionLabel:"Drop Off Location",optionValue:"default"}]}/>
 
-        <CalendarInput icon="/icons/calender.svg" className={mobileBookingStyles.greyBackground}/>
-        <CalendarInput icon="/icons/calender.svg" className={mobileBookingStyles.greyBackground}/>
+        <CalendarInput icon="/icons/calender.svg" >Pick-Up Date & Time </CalendarInput>
+          <CalendarInput icon="/icons/calender.svg" >Drop Off Date & Time</CalendarInput>
+
+
+        {/* <CalendarInput icon="/icons/calender.svg" className={mobileBookingStyles.greyBackground}/>
+        <CalendarInput icon="/icons/calender.svg" className={mobileBookingStyles.greyBackground}/> */}
         
         </div>
+        </>}
     </div>
   )
 }

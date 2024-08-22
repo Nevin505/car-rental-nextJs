@@ -1,14 +1,24 @@
 .calendarContainer{
     position: relative;
-    flex: 1;
-    /* padding-inline: ; */
+    display: flex;
 
-    & input{
-    padding: 0.6rem 2rem;
+}
+
+.calendarStyles{
+    display: block;
+    position: absolute;
+    border-radius: 1rem;
+    z-index: 4;
+    width: 100%;
+
+}
+
+.buttonStyles{
+    padding: 0.6rem 3rem;
     border-radius: 1rem;
     border: none;
-    width: 100%;
-    }
+    width: 100%; 
+    text-align: left;
 }
 
 .startIcon{

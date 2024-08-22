@@ -1,3 +1,5 @@
+"use client"
+import { log } from 'console';
 import customButtonStyles from './customButton.module.css';
 
 const customButton = ({children,className,onClick,isSelected,type='button'}:any) => {
@@ -7,6 +9,11 @@ const customButton = ({children,className,onClick,isSelected,type='button'}:any)
   // To highlight if the button is selected
   if(isSelected){
     customCssStyles+=` ${customButtonStyles.clicked}` 
+  }
+
+  const handleClick=()=>{
+    console.log("CLCIKED");
+    
   }
   return (
     <button className={`${customCssStyles}`} type={type}  onClick={onClick}>
