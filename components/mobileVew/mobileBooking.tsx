@@ -5,7 +5,7 @@ import DropDown from "../ui/dropDown";
 import CalendarInput from "../ui/calendarInput";
 import { useState } from "react";
 
-const mobileBooking = () => {
+const MobileBooking = () => {
 
     const[selectedButton,setIsSelected]=useState<string>('samePick');
     const [isButtonClicked, setIsButtonClicked] = useState<boolean>(false);
@@ -40,12 +40,9 @@ const mobileBooking = () => {
 
         <DropDown icon="/icons/DropDownLocation.svg" className={mobileBookingStyles.greyBackground} optionValues={[{optionLabel:"Drop Off Location",optionValue:"default"}]}/>
 
-        <CalendarInput icon="/icons/calender.svg" >Pick-Up Date & Time </CalendarInput>
-          <CalendarInput icon="/icons/calender.svg" >Drop Off Date & Time</CalendarInput>
+          <CalendarInput icon="/icons/calender.svg" backgroundColor="grey" >Pick-Up Date & Time </CalendarInput>
+          <CalendarInput icon="/icons/calender.svg" backgroundColor="grey">Drop Off Date & Time</CalendarInput>
 
-
-        {/* <CalendarInput icon="/icons/calender.svg" className={mobileBookingStyles.greyBackground}/>
-        <CalendarInput icon="/icons/calender.svg" className={mobileBookingStyles.greyBackground}/> */}
         
         </div>
         </>}
@@ -53,4 +50,4 @@ const mobileBooking = () => {
   )
 }
 
-export default mobileBooking
+export default MobileBooking

@@ -2,11 +2,11 @@
 import { useState } from "react";
 
 import Section from "@/components/ui/section";
-import CustomButton from "./ui/customButton";
-import DropDown from "./ui/dropDown";
-import CalendarInput from "./ui/calendarInput";
-import IconButton from "./ui/iconButton";
-import Seperation from "./ui/seperation";
+import CustomButton from "../ui/customButton";
+import DropDown from "../ui/dropDown";
+import CalendarInput from "../ui/calendarInput";
+import IconButton from "../ui/iconButton";
+import Seperation from "../ui/seperation";
 
 import heroStyles from './Hero.module.css'
 import Link from "next/link";
@@ -45,7 +45,6 @@ const Hero = () => {
 
                       <IconButton iconButton="/icons/search-glass.svg"/>
 
-                        {/* <span className={heroStyles.seperation}></span> */}
 
                         <Seperation/>
 

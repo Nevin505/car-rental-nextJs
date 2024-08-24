@@ -1,7 +1,9 @@
+
+
 .calendarContainer{
     position: relative;
     display: flex;
-
+    cursor: pointer;
 }
 
 .calendarStyles{
@@ -10,6 +12,9 @@
     border-radius: 1rem;
     z-index: 4;
     width: 100%;
+    inset: 0;
+    border: 0;
+    padding: 0.6rem 2rem;
 
 }
 
@@ -19,6 +24,7 @@
     border: none;
     width: 100%; 
     text-align: left;
+    background-color: white;
 }
 
 .startIcon{
@@ -27,3 +33,6 @@
     top: 32%;
 }
 
+.grey{
+    background-color: rgba(246, 247, 249, 1);
+}
