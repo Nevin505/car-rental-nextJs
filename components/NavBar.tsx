@@ -29,7 +29,7 @@ const NavBar = () => {
         {/* The Social Media Icons */}
         <div className={navBarStyles.socialMediaIconConatiner}>
             {socialMediaIcons.map((socialMediaIcon:string, index: number)=>{
-                 return <Link href='#' key={index}><Image src={socialMediaIcon} alt='facebook Icon' width={14} height={14}/></Link>
+                 return <Link href='#' key={index}><Image className={navBarStyles.socialMediaIcons} src={socialMediaIcon} alt='facebook Icon' width={14} height={14}/></Link>
             })}           
         </div>
 

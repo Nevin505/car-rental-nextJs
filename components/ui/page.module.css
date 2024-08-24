@@ -1,5 +1,6 @@
 .sectionCommonStyles{
     padding-inline: var(--inlinePaddingDesktop);
+    overflow-x: hidden;
 }
 
 .sectionCommonStyles>.popularCarSection{
@@ -8,6 +9,8 @@
 
 @media(max-width:835px){
     .sectionCommonStyles{
-        padding-inline: 1rem;
+        /* padding-inline: 1rem; */
+        padding-inline: var(--inlinePaddingSmallerDevice);
+
       }
     }

@@ -5,7 +5,7 @@
     padding-top: 2.5rem;
     padding-left: 4.4rem;
     gap: 2rem;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     /* First Div Placed Inside the parent div */
   }
 
@@ -13,7 +13,7 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        flex-basis: 22rem;
+        flex-basis: 18rem;
         gap: 2.5rem;
         max-width: 30rem;
         padding-top: 2.3rem;
@@ -29,12 +29,10 @@
         flex: 1;
         position: relative;
         display: flex;
-        /* flex-wrap: wrap; */
-        padding: 1.5rem 2.6rem;
-        justify-content: space-evenly;
-        gap: 1.5rem;
+        padding: 1rem 1.5rem;
+        gap: 0.4rem;
         background-color: var(--primary-Color);
-        flex-basis: 18rem;
+        flex-basis: 28rem;
   }
 
  .subscriptionButton{ 
@@ -45,12 +43,13 @@
 }
 
 .downloadInfo{
-    flex-basis: 13rem;
+    flex: 1 0 10rem;
     display: flex;
   gap: 1.6rem;
   padding: 0.4rem;
   flex-direction: column;
   margin: auto 0;
+  max-width: 20rem;
 }
 
 .user-input-boxes {
@@ -68,6 +67,7 @@
   #downloadInstruction {
     color: white;
     font-size: 0.875rem;
+    font-weight: 500;
   }
  
   /* Styles for the input Tag */
@@ -104,6 +104,17 @@
     border: 0;
     border-radius: 0.5rem;
   }
+
+  .storeIconsContainerText{
+      color: white;
+      font-size: 0.875rem;
+      padding-bottom: 1rem
+  }
+  .storeIcons{
+    display: flex;
+    gap: 0.4rem;
+  }
+
   
   @media(max-width:835px){
 
@@ -118,7 +129,7 @@
 .subscriptionContent{
     flex-basis: 24rem;
     max-width: 100%;
-    padding-inline: 1.5rem;
+    padding-inline: 0rem;
     gap: 1rem;
 }
 
@@ -149,13 +160,35 @@
     padding-bottom: 1rem;
   }
 
+
   }
   @media(max-width:650px){
+
+    .appDownloadContent{
+      padding-bottom: 6rem;
+    }
     .appPhone{
         width: 8.5rem;
         height: 15rem;
     }
     .userInputBoxes{
-flex-direction: column;
+      flex-direction: column;
     }
+    #inputGroup{
+        position: absolute;
+        padding: 0.8rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    #downloadInstruction {
+      font-size: 0.75rem;
+    }
+
+    .storeIcons{
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+  
   }

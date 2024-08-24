@@ -11,9 +11,11 @@
     border: 2px solid red;
 }
 .socialMediaIconConatiner{
-     display: flex;
-     justify-content: flex-end;
-     gap: 1rem;
+     text-align: right;
+}
+.socialMediaIcons{
+    margin-inline: 0.4rem;
+  
 }
 .mainNavBar{
     display: flex;
@@ -75,7 +77,9 @@
     .headerStyles{
         padding-inline: var(--inlinePaddingSmallerDevice);
       }
-
+    .socialMediaIconConatiner{
+        display: none;
+    }
     .branding{
         width: 9.6rem;
         height: 1.4375rem;

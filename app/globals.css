@@ -9,7 +9,7 @@
 
 :root {
   --inlinePaddingDesktop: 3.5rem;
-  --inlinePaddingSmallerDevice: 1.25rem;
+  --inlinePaddingSmallerDevice: 1rem;
   --primary-Color: #e21e26;
   --button-primary: var(--primary-Color);
   --border-radius:1rem

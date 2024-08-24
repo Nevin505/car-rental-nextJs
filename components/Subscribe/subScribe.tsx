@@ -21,24 +21,24 @@ type RegexPatterns = {
 
 const subScribe = () => {
 
-    const [errors, setErrors] = useState({ name: '', mail: '' });
+    const [errors, setErrors] = useState<{ name: string; mail: string }>({ name: '', mail: '' });
 
-    const [phoneNumberValidations, setPhoneNumberValidations] = useState('');
+    const [phoneNumberValidations, setPhoneNumberValidations] = useState<string>('');
 
-
-    const getFormData=(e:any)=>{
-        const formData=new FormData(e.target);
+ // Function to extract form data as an object 
+    const getFormData=(e:React.FormEvent<HTMLFormElement>)=>{
+        const formData=new FormData(e.currentTarget);
         const formObject = Object.fromEntries(formData.entries());    
         const formObjectKeys=Object.keys(formObject);
         return {formObjectKeys,formObject};
     }
 
 // Form Submit Logic
-  const handleSubscribeForm=(e:any)=>{
+  const handleSubscribeForm=(e:React.FormEvent<HTMLFormElement>)=>{
 
     e.preventDefault();
 
-    const error:any={};
+    const error: { [key: string]: string } ={}
 
     const {formObjectKeys,formObject}=getFormData(e)
 
@@ -47,7 +47,7 @@ const subScribe = () => {
             
             error[formObjectKey]="Cannot Be Empty" 
         }
-        else if(!regexPatternCondition(regexPatterns[formObjectKey],formObject[formObjectKey] )){
+        else if(!regexPatternCondition(regexPatterns[formObjectKey as keyof RegexPatterns],formObject[formObjectKey] )){
             error[formObjectKey]="Enter a Valid Mail" 
         }
     })
@@ -62,31 +62,23 @@ const subScribe = () => {
   
 
   }
-  const  handlePhoneNumberCheck=(e:any)=>{
+  const  handlePhoneNumberCheck=(e: React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     
-    const formData=new FormData(e.target);
+    const formData=new FormData(e.currentTarget);
   const phoneNumber=formData.get('phoneNumber')
     let error:string=''
     if(isItEmpty(phoneNumber)){
-        console.log("First Condition for Validayion");
-        
         error="Cannpt be Emppty"
     }
     else if(!regexPatternCondition(phoneNumberRegexPattern,phoneNumber)){
-        console.log("Second Condition for Validayion");
-
         error='Enter a Valid PhoneNumber'
     }
 
     if(error){
-        console.log("check Condition for Validayion");
-
         setPhoneNumberValidations(error)
     }
     else{
-        console.log("Clear Validayion");
-
         setPhoneNumberValidations('')
     }
 }
@@ -113,21 +105,21 @@ const subScribe = () => {
 
      {/*  Container for the app download content */}
        <div className={subscribeStyles.appDownloadContent}>
-        {/* <Image/> */}
+        {/* <Image/> Container */}
         <Image src="/images/AppPreview.png" width="231" height="417" alt="application on phine Screen" className={subscribeStyles.appPhone}/>
          {/*  Container for download-related information*/}
         <div className={subscribeStyles.downloadInfo}>
             {/* <!-- Text paragraph for download instruction --> */}
              <p  id={subscribeStyles.downloadInstruction}>Enter your number and receive  a direct link to download the app</p>
                 {/* <!-- Container for phone number input and button --> */}
-               <form id="input-group" onSubmit={handlePhoneNumberCheck}>
-               <Input placeholder="phoneNumber" name="phoneNumber"  erroMessage={phoneNumberValidations} cssClasses={subscribeStyles.inputFlex1} erroMessagClass="black"/>
+               <form id={subscribeStyles.inputGroup} onSubmit={handlePhoneNumberCheck}>
+               <Input placeholder="Enter Phone Number" name="phoneNumber"  erroMessage={phoneNumberValidations} cssClasses={subscribeStyles.inputFlex1} erroMessagClass="black"/>
                       <CustomButton type="submit" className={subscribeStyles.generateLinkButton} id="generateLink">Get The Link</CustomButton>
                </form>
                  {/* <!-- Container for app store icons --> */}
-               <div  className="store-icons-container" id="icons">
-                <p>Get in on</p>
-                <span id="store-icons" >
+               <div  className={subscribeStyles.storeIconsContainer}  id="icons">
+                <p  className={subscribeStyles.storeIconsContainerText}>Get in on</p>
+                <span className={subscribeStyles.storeIcons}>
                    <Image src="/images/PlayStore-White-logo.svg" width={103} height={30} alt="PlayStore-White-logo"/>
                    <Image src="/images/AppStore-white-logo.svg"  width={103} height={30}  alt="AppStore-white-logo"/>
                </span>
