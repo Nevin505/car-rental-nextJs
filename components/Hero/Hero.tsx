@@ -3,7 +3,6 @@ import { useState } from "react";
 import Link from "next/link";
 
 // Custom Components
-import Section from "@/components/ui/section";
 import IconButton from "../ui/iconButton";
 import Seperation from "../ui/seperation";
 import DropDown from "../ui/dropDown";
