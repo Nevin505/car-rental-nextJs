@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import navBarStyles from './NavBar.module.css';
 import { useState } from 'react';
-import { NAV_LINKS, navLinks, SOCIAL_MEDIA_ICONS } from '@/constants/navBar';
+import { NAV_LINKS, SOCIAL_MEDIA_ICONS } from '@/constants/navBar';
 import { NavLink } from '@/types/Types';
 
 
