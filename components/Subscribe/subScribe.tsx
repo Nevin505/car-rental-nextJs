@@ -21,7 +21,7 @@ type RegexPatterns = {
 
 const SubScribe = () => {
 
-    const [errors, setErrors] = useState<{ name: string; mail: string }>({ name: '', mail: '' });
+    const [errors, setErrors] = useState({ name: '', mail: '' });
 
     const [phoneNumberValidations, setPhoneNumberValidations] = useState<string>('');
 
@@ -38,7 +38,7 @@ const SubScribe = () => {
 
     e.preventDefault();
 
-    const error: { [key: string]: string } ={}
+    const error:any={}
 
     const {formObjectKeys,formObject}=getFormDatas(e)
 
