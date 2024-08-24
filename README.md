@@ -2,6 +2,31 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+```bash
+Car Rental Website
+
+Tech-stack : Next Js , TypeScript  ,Css
+
+Its a Car Rental Website Where user can log in and search for a car which affords their rate
+
+Deplyed Website : (https://car-rental-next-2z50qmte6-nevin-zachariah-johns-projects.vercel.app/)
+
+Used the concept of resulability for button and input box 
+Implemented Carousel using use State
+Input Box Validation
+
+#Folder Structure
+  Constants - All the Contants Used in this Project
+  types - Conatins all the types used for the Project and for components
+
+
+
+
+```
+
+
+
+
 First, run the development server:
 
 ```bash
