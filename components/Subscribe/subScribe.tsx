@@ -94,8 +94,8 @@ const SubScribe = () => {
               <div className={subscribeStyles.userInputBoxes}>
                 <Input   placeholder="Name" name="name"     erroMessage={errors.name} cssClasses={subscribeStyles.inputFlex1}/>
                 <Input    placeholder="Email" name="mail" erroMessage={errors.mail} cssClasses={subscribeStyles.inputFlex1}/>
-</div>
-            <p  className={subscribeStyles.subscriptionDescription}>Don't miss out! enter your email and your name, then hit         subscribe to unlock a world of special offers and details.</p>
+              </div>
+            <p  className={subscribeStyles.subscriptionDescription}>Don&apos;t miss out! enter your email and your name, then hit         subscribe to unlock a world of special offers and details.</p>
             <CustomButton type="submit" className={`${subscribeStyles.subscriptionButton} border-0 pointer`}>Subscribe</CustomButton>
             </form>
 
