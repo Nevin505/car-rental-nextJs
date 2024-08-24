@@ -9,7 +9,7 @@ Tech-stack : Next Js , TypeScript  ,Css
 
 Its a Car Rental Website Where user can log in and search for a car which affords their rate
 
-Deplyed Website : [https://car-rental-next-2z50qmte6-nevin-zachariah-johns-projects.vercel.app/](https://car-rental-next-2z50qmte6-nevin-zachariah-johns-projects.vercel.app/)
+Deplyed Website  [Website](https://car-rental-next-2z50qmte6-nevin-zachariah-johns-projects.vercel.app/)
 
 Used the concept of resulability for button and input box 
 Implemented Carousel using use State
