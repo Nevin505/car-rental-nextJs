@@ -1,16 +1,17 @@
 'use client'
 import { useState } from "react";
-
-import Section from "@/components/ui/section";
-import CustomButton from "../ui/customButton";
-import DropDown from "../ui/dropDown";
-import CalendarInput from "../ui/calendarInput";
-import IconButton from "../ui/iconButton";
-import Seperation from "../ui/seperation";
-
-import heroStyles from './Hero.module.css'
 import Link from "next/link";
 
+// Custom Components
+import Section from "@/components/ui/section";
+import IconButton from "../ui/iconButton";
+import Seperation from "../ui/seperation";
+import DropDown from "../ui/dropDown";
+import CustomButton from "../ui/customButton";
+import CalendarInput from "../ui/calendarInput";
+
+
+import heroStyles from './Hero.module.css'
 const Hero = () => {
 
    const[selectedButton,setSelectedButton]=useState('samePick');
@@ -50,8 +51,7 @@ const Hero = () => {
 
                         <CustomButton  className={`${heroStyles.bookingOptionButton} ${heroStyles.buttonPadding}  border-white`}>Quick Book</CustomButton>
                 </div>
-                {/* Third Column  */}
-
+                {/* Third Column about various download options  */}
                 <div className={heroStyles['app-download-section']}>
                 <p>Download our App for easy accessibility anytime, anywhere!</p>
                 <div className={heroStyles['store-links-container']}>
