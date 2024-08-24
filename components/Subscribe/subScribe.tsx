@@ -113,7 +113,7 @@ const SubScribe = () => {
                 {/* <!-- Container for phone number input and button --> */}
                <form id={subscribeStyles.inputGroup} onSubmit={handlePhoneNumberCheck}>
                <Input placeholder="Enter Phone Number" name="phoneNumber"  erroMessage={phoneNumberValidations} cssClasses={subscribeStyles.inputFlex1} erroMessagClass="black"/>
-                      <CustomButton type="submit" className={subscribeStyles.generateLinkButton} id="generateLink">Get The Link</CustomButton>
+                      <CustomButton type="submit" className={subscribeStyles.generateLinkButton}>Get The Link</CustomButton>
                </form>
                  {/* <!-- Container for app store icons --> */}
                <div  className={subscribeStyles.storeIconsContainer}  id="icons">
