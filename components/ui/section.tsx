@@ -1,7 +1,7 @@
-const section = ({children,className}) => {
+const section = () => {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div>
+      
     </div>
   )
 }
