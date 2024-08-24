@@ -12,6 +12,7 @@ import CalendarInput from "../ui/calendarInput";
 
 
 import heroStyles from './Hero.module.css'
+import Image from "next/image";
 const Hero = () => {
 
    const[selectedButton,setSelectedButton]=useState('samePick');
@@ -21,11 +22,11 @@ const Hero = () => {
    }
 
   return (
-       <Section className={heroStyles.bookingDownloadSection}>
+       <section className={heroStyles.bookingDownloadSection}>
         {/* Button for Bookings */}
                <div className={heroStyles.bookingTypeContainer}>
 
-               <CustomButton className={`${heroStyles.bookingOptionButton} ${heroStyles['border-0']}`} isSelected={selectedButton==='samePick'} selectedButton={selectedButton} onClick={()=>handleButtonClick('samePick')}>Same as Pick-Up</CustomButton>
+               <CustomButton className={`${heroStyles.bookingOptionButton} ${heroStyles['border-0']}`} isSelected={selectedButton==='samePick'} onClick={()=>handleButtonClick('samePick')}>Same as Pick-Up</CustomButton>
 
                <CustomButton   className={`${heroStyles.bookingOptionButton} ${heroStyles['border-0']}`} isSelected={selectedButton==='differentPick'} onClick={()=>handleButtonClick('differentPick')}>Different Drop-Off</CustomButton>
 
@@ -59,7 +60,15 @@ const Hero = () => {
             <Link className={heroStyles["playStore"]} href="https://play.google.com/store/games?hl=en&pli=1" target="_blank"></Link>
           </div>
                 </div>
-            </Section> 
+
+                {/* Contains Both Call Option and Support */}
+                <div className={`${heroStyles.supportOptionsContainer} ' ' ${heroStyles.item1}`} >
+          <Image title="Call" src="/images/Call.svg" id="call-icons"  width="26" height="26" alt="Call Icon" />
+      </div>
+      <div className={`${heroStyles.supportOptionsContainer} ' ' ${heroStyles.item2}`}>
+        <Image title="Chat Support" src="/images/24by7.svg" id="24support" width="32" height="32" alt="24 by 7 Support" />
+      </div>
+    </section> 
   )
 }
 

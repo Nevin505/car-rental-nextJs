@@ -1,8 +1,9 @@
 "use client"
 import { log } from 'console';
 import customButtonStyles from './customButton.module.css';
+import { CustomButtonProps } from '@/types/Types';
 
-const customButton = ({children,className,onClick,isSelected,type='button'}:any) => {
+const customButton = ({children,className,onClick,isSelected,type='button'}:CustomButtonProps) => {
 
   let customCssStyles=`${className} ${customButtonStyles.regular}`;
 

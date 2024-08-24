@@ -2,8 +2,13 @@
 import Image from 'next/image'
 import cardItemStyles from './cartItem.module.css'
 import CustomButton from '../ui/customButton'
+import { carItems } from '@/types/Types'
 
-const cartItem = ({cartItem}:any) => {
+interface CartItemProps {
+  cartItem: carItems;
+}
+
+const cartItem:React.FC<CartItemProps> = ({cartItem}) => {
 
   const showMore=()=>{
     console.log("Clicked");

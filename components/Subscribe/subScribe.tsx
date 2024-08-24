@@ -19,14 +19,14 @@ type RegexPatterns = {
 
   const phoneNumberRegexPattern =/^(\+91|\+91\-|0)?[789]\d{9}$/;
 
-const subScribe = () => {
+const SubScribe = () => {
 
     const [errors, setErrors] = useState<{ name: string; mail: string }>({ name: '', mail: '' });
 
     const [phoneNumberValidations, setPhoneNumberValidations] = useState<string>('');
 
  // Function to extract form data as an object 
-    const getFormData=(e:React.FormEvent<HTMLFormElement>)=>{
+    const getFormDatas=(e:React.FormEvent<HTMLFormElement>)=>{
         const formData=new FormData(e.currentTarget);
         const formObject = Object.fromEntries(formData.entries());    
         const formObjectKeys=Object.keys(formObject);
@@ -40,7 +40,7 @@ const subScribe = () => {
 
     const error: { [key: string]: string } ={}
 
-    const {formObjectKeys,formObject}=getFormData(e)
+    const {formObjectKeys,formObject}=getFormDatas(e)
 
     formObjectKeys.forEach(formObjectKey=>{
         if(isItEmpty(formObject[formObjectKey])){
@@ -69,7 +69,7 @@ const subScribe = () => {
   const phoneNumber=formData.get('phoneNumber')
     let error:string=''
     if(isItEmpty(phoneNumber)){
-        error="Cannpt be Emppty"
+        error="Cannot be Empty"
     }
     else if(!regexPatternCondition(phoneNumberRegexPattern,phoneNumber)){
         error='Enter a Valid PhoneNumber'
@@ -83,7 +83,6 @@ const subScribe = () => {
     }
 }
 
-  console.log(errors);
   
       
   return (   
@@ -131,4 +130,4 @@ const subScribe = () => {
   )
 }
 
-export default subScribe;
+export default SubScribe;

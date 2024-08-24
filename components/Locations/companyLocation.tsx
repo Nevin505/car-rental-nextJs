@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 
 import companyBranchStyles from './companyLocations.module.css';
+import { COMPANY_BRANCHES } from '@/constants/MainPage';
+import { CompanyBranch } from '@/types/Types';
 const companyBranches=[
     {
         location: "Dubai",
@@ -37,7 +39,7 @@ const companyLocation = () => {
     <section  className={companyBranchStyles.branchLocationContanierNew}>
       <h2>Locations</h2>
       <div className={companyBranchStyles.branchList }>
-        {companyBranches.map(companyBranch=>{
+        {COMPANY_BRANCHES.map((companyBranch:CompanyBranch)=>{
 
          return <div key={companyBranch.location} className={companyBranchStyles.branchItem}><Image src={companyBranch.icon} alt="Location-Icon" height={28} width={24}/><span>{companyBranch.location}</span></div>
         })}

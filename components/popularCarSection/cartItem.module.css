@@ -40,18 +40,25 @@
     justify-content: space-between;
     gap: 0.625rem;
     align-items: center;
-    & button {
-      width: 6rem;
-      height: 2.25rem;
-      background-color: var(--primary-Color);
-      color: white;
-      border-radius: 0.25rem;
-    }
+  }
+
+  .car-item-button{
+    width: 6rem;
+    height: 2.25rem;
+    background-color: var(--primary-Color);
+    color: white;
+    border-radius: 0.25rem;
+    border: 0;
   }
   .vehicle-image {
     display: block;
     object-fit: cover;
     object-position: center;
+  }
+
+  .car-item-pricing> .car-item-price {
+    font-size: 1rem;
+    font-weight: 600;
   }
 
 
@@ -90,19 +97,22 @@
         flex-direction: column;
         gap: 0.4rem;
         align-items: start;
-        & button {
-          width: 8rem;
-          height: 2.375rem;
-          background-color: var(--primary-Color);
-          color: white;
-          border-radius: 0.25rem;
-        }
-        & .car-item-price {
-          font-size: 0.8rem;
-          font-weight: 600;
-        }
+
       }
 
+      .car-item-button{
+        width: 8rem;
+        height: 2.375rem;
+        background-color: var(--primary-Color);
+        color: white;
+        border-radius: 0.25rem;
+      }
+
+      /* Car Item Price Desigin */
+      .car-item-pricing> .car-item-price {
+        font-size: 0.8125rem;
+        font-weight: 600;
+      }
 
       .car-item-details {
 

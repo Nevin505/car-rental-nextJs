@@ -14,7 +14,6 @@ import { socialMediaLinks } from '@/constants/footer'
 
 
 const footer = () => {
-  console.log("The Value");
   
  
   return (
@@ -26,7 +25,7 @@ const footer = () => {
                 <div className={footerCssStyles['contact-section-container']}>
                     {/* Brand Logo and the Writings  */}
                     <div className={footerCssStyles["company-logo-section"]}>
-                        <Image src="/icons/footer/Company-Brand-logo.svg" alt="Company-Brand-logo" width={56} height={66}/>
+                        <Image src="/icons/footer/footer-logo-new.svg"  className={footerCssStyles.footerIcon} alt="Company-Brand-logo" width={56} height={66}/>
                         <p>Member of the Al Habtoor Group</p>
                     </div>
                     {/* Footer-Navigation-Links  */}

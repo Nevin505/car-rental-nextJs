@@ -12,5 +12,7 @@
         /* padding-inline: 1rem; */
         padding-inline: var(--inlinePaddingSmallerDevice);
 
+        position: relative;
+
       }
     }

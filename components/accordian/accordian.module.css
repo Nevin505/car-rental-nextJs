@@ -11,6 +11,9 @@
     border: 0;
   border-bottom: 0.18rem solid rgba(205, 214, 218, 0.25);
 }
+.accordianItem:last-of-type{
+  border: 0;
+}
 .accordianButton{
   width: 100%;
   padding-block: 1rem;
@@ -21,11 +24,6 @@
   border: 0;
   font-weight: 500;
   }
-
-  /* .accordianButton>Image{
-    position: absolute;
-    right: 0;
-  } */
 
   .rotate45{
     position: absolute;
@@ -41,7 +39,6 @@
   }
 
   .accordianContent{
-    /* display: none; */
     padding-block:0.6875rem 1.5rem ;
     font-size: 0.875rem;
     opacity: 50%;

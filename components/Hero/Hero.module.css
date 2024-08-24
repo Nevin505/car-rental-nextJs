@@ -78,6 +78,27 @@
     background-image: url('../../public/images/BlackPlayStoreButton.svg');       
 }
 
+.supportOptionsContainer{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    width: 3rem;
+    height: 2.4rem;
+    border-top-left-radius:2rem;
+    border-bottom-left-radius:2rem;
+    background-color: white;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+     display: flex;
+     padding-left: 0.25rem;
+     align-items: center;
+     cursor: pointer;
+}
+.item1{
+    top: 10em;   
+}
+.item2{
+    top: 14rem;
+}
 
 @media(max-width:835px){
     .bookingTypeContainer,.bookingTypeContainer{
@@ -94,6 +115,13 @@
     .app-download-section{
         flex-direction: column;
         text-align: center;
+    }
+
+    .item1{
+        top: 1em;   
+    }
+    .item2{
+        top: 4rem;
     }
 }
 /* bookingTypeContainer */

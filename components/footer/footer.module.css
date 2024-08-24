@@ -25,6 +25,7 @@
 }
 
 .company-logo-section{
+
     & img{
         width: 3.54rem;
         height: 4.125rem;
@@ -78,7 +79,7 @@ text-align: center;
 
 /* To Alter the Background Color of The Icon Images */
 .imageBackgrounColorWhite{
-    background-color: white;
+    filter: invert(100%);
     border-radius: 0.25rem;
 }
 .sub-companies{
@@ -139,7 +140,6 @@ text-align: center;
 
     }
     .company-profile-section{
-        /* padding-inline: 1rem; */
         background-color: white;
     }
 
@@ -226,15 +226,25 @@ text-align: center;
     color: white;
 }
 
+.footerIcon{
+    filter: invert(100%) sepia(0%) saturate(80%) hue-rotate(180deg) brightness(0.85) contrast(1.5);
+
 }
+
 .secure-Lock{
     display: inline;
 }
 #secure-Lock-small{
     display: none;
 }
-/* To Alter the Background Color of The Icon Images */
 .imageBackgrounColorBlacK{
-        background-color: black;
+        filter: invert(100%);
         border-radius: 0.25rem;
+        
 }
+.imageBackgrounColorWhite{
+    filter: invert(0%);
+    border-radius: 0.25rem;
+}
+}
+/* To Alter the Background Color of The Icon Images */
