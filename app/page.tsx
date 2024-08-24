@@ -10,7 +10,7 @@ import RentalStyles  from "@/components/RentLease/rentLease"
 import CompanyLocation   from "@/components/Locations/companyLocation"
 import Accordian from "@/components/accordian/accordian";
 import Footer from "@/components/footer/footer";
-
+// import MobileBooking from "@/components/mobileVew/mobileBooking";
 export default function Home() {
   return (
     <>

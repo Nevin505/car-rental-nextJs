@@ -33,7 +33,7 @@ const rentLease = () => {
       <div className={rentalStyles.stepsContainer}>
         {/*  Step Number */}
         {steps.map((step) => {
-          return <div className={rentalStyles.stepItem}>
+          return <div key={step.stepNumber} className={rentalStyles.stepItem}>
             <h3 className={rentalStyles.stepNumber}>0{step.stepNumber}</h3>
             {/*Container for step details (icon + text) */}
             <div className={rentalStyles.stepDetails}>
