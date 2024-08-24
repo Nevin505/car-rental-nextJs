@@ -55,8 +55,8 @@ const Hero = () => {
                 <div className={heroStyles['app-download-section']}>
                 <p>Download our App for easy accessibility anytime, anywhere!</p>
                 <div className={heroStyles['store-links-container']}>
-            <Link className={heroStyles["appStore"]} href=""></Link>
-            <Link className={heroStyles["playStore"]} href=""></Link>
+            <Link className={heroStyles["appStore"]} href="https://play.google.com/store/games?hl=en&pli=1" target="_blank"></Link>
+            <Link className={heroStyles["playStore"]} href="https://play.google.com/store/games?hl=en&pli=1" target="_blank"></Link>
           </div>
                 </div>
             </Section> 

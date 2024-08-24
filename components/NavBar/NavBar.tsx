@@ -30,8 +30,8 @@ const NavBar = () => {
     <header className={navBarStyles.headerStyles}>
         {/* The Social Media Icons */}
         <div className={navBarStyles.socialMediaIconConatiner}>
-            {SOCIAL_MEDIA_ICONS.map((socialMediaIcon:string, index: number)=>{
-                 return <Link href='#' key={index}><Image className={navBarStyles.socialMediaIcons} src={socialMediaIcon} alt='facebook Icon' width={14} height={14}/></Link>
+            {SOCIAL_MEDIA_ICONS.map((socialMediaIcon: { icon: string, link: string }, index: number)=>{
+                 return <Link href={socialMediaIcon.link} key={index} target="_blank"><Image className={navBarStyles.socialMediaIcons} src={socialMediaIcon.icon} alt='facebook Icon' width={14} height={14}/></Link>
             })}           
         </div>
 
