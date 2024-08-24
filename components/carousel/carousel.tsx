@@ -1,20 +1,23 @@
 'use client'
-import carouselStyles from './carousel.module.css'
-import CustomButton from '../ui/customButton'
 import { useEffect, useState } from 'react'
 
-const backGroundImages=["/images/2018-Mitsubishi-backgroungImage.png","/images/2018-Mitsubishi-backgroungImage.png","/images/2018-Mitsubishi-backgroungImage.png"]
+import carouselStyles from './carousel.module.css'
+
+import CustomButton from '../ui/customButton'
+
+import { BACKGROUND_IMAGES } from '@/constants/MainPage';
+
 
 const indicators=[0,1,2];
 
-const carousel = () => {
+const Carousel = () => {
    const[backGroundImageIndex,setBackGroundImageIndex]= useState(0);
 
    useEffect(()=>{
     const interval=setInterval(() => {
       setBackGroundImageIndex((prevIndex)=>{
-        const nextIndex= prevIndex+1%backGroundImages.length
-        return nextIndex===backGroundImages.length?0:nextIndex
+        const nextIndex= prevIndex+1%BACKGROUND_IMAGES.length
+        return nextIndex===BACKGROUND_IMAGES.length?0:nextIndex
       })
     }, 8000);
 
@@ -22,7 +25,7 @@ const carousel = () => {
    },[])
 
   return (
-    <div className={carouselStyles.bannerWrapper} style={{ backgroundImage: `url(${backGroundImages[backGroundImageIndex]})` }}>
+    <div className={carouselStyles.bannerWrapper} style={{ backgroundImage: `url(${BACKGROUND_IMAGES[backGroundImageIndex]})` }}>
                       <div className={carouselStyles.offerContentWrapper}>
                           <div className={carouselStyles.offerContent}>
                           Recieve guarnteed
@@ -42,4 +45,4 @@ const carousel = () => {
   )
 }
 
-export default carousel
+export default Carousel
