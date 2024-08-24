@@ -2,13 +2,8 @@
     padding-inline: var(--inlinePaddingDesktop);
   }
   
-  /* @media(max-width:835px){
-  
-   
-     
-  } */
-.headerStyles{
-    border: 2px solid red;
+.cursorPointer{
+    cursor: pointer;
 }
 .socialMediaIconConatiner{
      text-align: right;
@@ -57,6 +52,8 @@
         font-weight: lighter;
         text-align: right;
 }
+
+
 @media(max-width:1044px){
 
     .headerStyles{
@@ -90,7 +87,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding-block: 0.4rem;
+        padding-block: 0.8rem 0;
     }
     #hamburgerMenu{
         display: block;
@@ -111,11 +108,11 @@
      padding:3.5rem 2rem;
      color: black;
      position: absolute;
-     border: 2px solid red;
+     /* border: 2px solid red; */
      right: 0;
      top: 0;
      z-index: 4;
-     background-color: azure;
+     background-color: white;
    }
 
    .linkStyles{
