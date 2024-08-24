@@ -18,7 +18,7 @@
 
   /* Which Conatin a Single Steps for the Process*/
   .stepItem{
-    flex: 0 0 21rem;
+    flex: 0 0 18rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,7 +61,7 @@ font-size: 0.81rem;
 @media(max-width:835px){
     /* steps-container Desigin */
     .stepItem{
-        flex: 0 0 18rem;
+        flex: 0 0 21rem;
     }
   .rentalInstructions>h2{
     /* & h2{ */
