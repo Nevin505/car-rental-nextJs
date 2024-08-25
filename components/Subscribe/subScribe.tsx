@@ -8,6 +8,7 @@ import Input  from '../ui/Input/Input';
 
 import {isItEmpty,regexPatternCondition}   from  '../../app/lib/inputValidation'
 
+import {useInput} from '../../hooks/useInput'
   
 type RegexPatterns = {
     name: RegExp;
@@ -25,7 +26,7 @@ const SubScribe = () => {
 
     const [phoneNumberValidations, setPhoneNumberValidations] = useState<string>('');
 
- // Function to extract form data as an object 
+ // Function to extract data's from the form object 
     const getFormDatas=(e:React.FormEvent<HTMLFormElement>)=>{
         const formData=new FormData(e.currentTarget);
         const formObject = Object.fromEntries(formData.entries());    
@@ -37,50 +38,40 @@ const SubScribe = () => {
   const handleSubscribeForm=(e:React.FormEvent<HTMLFormElement>)=>{
 
     e.preventDefault();
-
     const error:any={}
-
     const {formObjectKeys,formObject}=getFormDatas(e)
 
     formObjectKeys.forEach(formObjectKey=>{
-        if(isItEmpty(formObject[formObjectKey])){
-            
+        if(isItEmpty(formObject[formObjectKey])){        
             error[formObjectKey]="Cannot Be Empty" 
         }
         else if(!regexPatternCondition(regexPatterns[formObjectKey as keyof RegexPatterns],formObject[formObjectKey] )){
-            error[formObjectKey]="Enter a Valid Mail" 
+            error[formObjectKey]=`Enter a Valid ${formObjectKey}`;
         }
     })
-    console.log(error);
-    
- if (error.mail || error.name) {
-    console.log("Here Setting the state");
-    setErrors(error);
-} else {
-    setErrors({ name: '', mail: '' });
-}
-  
 
-  }
+    const hasError = Object.values(error).some(err => err);
+    if (hasError) {
+    setErrors(error);
+    } else {
+    setErrors({ name: '', mail: '' });
+    alert("Successfully Subscribed");
+    }
+}
+
+// Validation logic for Forms 
   const  handlePhoneNumberCheck=(e: React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
-    
     const formData=new FormData(e.currentTarget);
-  const phoneNumber=formData.get('phoneNumber')
+    const phoneNumber=formData.get('phoneNumber')
     let error:string=''
-    if(isItEmpty(phoneNumber)){
-        error="Cannot be Empty"
-    }
-    else if(!regexPatternCondition(phoneNumberRegexPattern,phoneNumber)){
-        error='Enter a Valid PhoneNumber'
-    }
 
-    if(error){
-        setPhoneNumberValidations(error)
-    }
-    else{
-        setPhoneNumberValidations('')
-    }
+    error=isItEmpty(phoneNumber)?'*Field Cannot be Empty':!regexPatternCondition(phoneNumberRegexPattern,phoneNumber)?'*Enter a Valid PhoneNumber':'';
+
+    error ? setPhoneNumberValidations(error):setPhoneNumberValidations('');
+
+    !error && alert("Please Check the link")
+
 }
 
   
